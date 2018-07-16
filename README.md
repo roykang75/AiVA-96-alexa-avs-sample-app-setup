@@ -53,9 +53,9 @@ Brief instructions and additional notes are below:
     cd AiVA-96-alexa-avs-sample-app-setup/
     bash automated_install.sh
     ```
-    If you use wakeWake Word Agent, connect GPIO 36 and GPIO 13 on AiVA-96 board.  
+    If you use wakeWake Word Agent, connect GPIO 36 and GPIO 13 on AiVA-96 board using wire.  
     ![](/assets/wakeword.png)
-    
+
 Important considerations
 ---
 * Review the AVS [Terms & Agreements](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/support/terms-and-agreements).  
