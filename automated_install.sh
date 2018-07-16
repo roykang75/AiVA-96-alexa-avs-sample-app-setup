@@ -154,7 +154,7 @@ get_credential()
 check_credentials()
 {
   clear
-  echo "====== AVS + AiVA and DragonBoard 410c User Credentials======"
+  echo "====== AiVA-96 AVS User Credentials======"
   echo ""
   echo ""
   if [ "${#ProductID}" -eq 0 ] || [ "${#ClientID}" -eq 0 ] || [ "${#ClientSecret}" -eq 0 ]; then
@@ -339,7 +339,7 @@ get_alpn_version()
 # Script to check if all is good before install script runs
 #-------------------------------------------------------
 clear
-echo "====== AVS + AiVA and DragonBoard 410c Licenses and Agreement ======"
+echo "====== AiVA-96 AVS Licenses and Agreement ======"
 echo ""
 echo ""
 echo "This code base is dependent on several external libraries and virtual environments like cmuSphinx, cmuPocksphinx, 96BoardGPIO, libsoc, Atlas, VLC, NodeJS, npm, OpenJDK, OpenSSL, Maven & CMake."
@@ -355,10 +355,10 @@ echo ""
 parse_user_input 1 0 1
 
 clear
-echo "=============== AVS + AiVA and DragonBoard 410c Installer =========="
+echo "=============== AiVA-96 AVS for DragonBoard 410c Installer =========="
 echo ""
 echo ""
-echo "Welcome to the AVS + AiVA and DragonBoard 410c installer."
+echo "Welcome to the AiVA-96 AVS for DragonBoard 410c Installer."
 echo "If you don't have an Amazon developer account, please register for one"
 echo "at https://developer.amazon.com/edw/home.html and follow the"
 echo "instructions on github.com to create an AVS device or application."
