@@ -50,16 +50,12 @@ Brief instructions and additional notes are below:
 
 4. Run the installation script
     ```
-    cd AiVA-96-google-assistant-setup/
+    cd AiVA-96-alexa-avs-sample-app-setup/
     bash automated_install.sh
     ```
 
-
+Important considerations
 ---
-
-
-## Important considerations
-
 * Review the AVS [Terms & Agreements](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/support/terms-and-agreements).  
 
 * The earcons associated with the sample project are for **prototyping purposes only**. For implementation and design guidance for commercial products, please see [Designing for AVS](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/designing-for-the-alexa-voice-service) and [AVS UX Guidelines](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/alexa-voice-service-ux-design-guidelines).
