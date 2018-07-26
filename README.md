@@ -91,8 +91,7 @@ cd ~/workspace/alexa-avs-sample-app/samples/javaclient && mvn exec:exec
     ( IMPORTANT NOTE: Don't respond to the second pop up until after you've logged in to your Amazon account.)
 ![](/assets/dragonBoard_alexa_step_3.png)
 
-- Run Chromium web browser and then paste URL(Ctrl + V) on clipboard
-- Input ENTER key and click on "ADVANCED".
+- Run Chromium web browser and then paste URL(Ctrl + V) on clipboard. Input ENTER key and click on "ADVANCED".
 ![](/assets/dragonBoard_alexa_step_4.png)
 
 - Click on "Proceed to localhost \(unsafe\)"
