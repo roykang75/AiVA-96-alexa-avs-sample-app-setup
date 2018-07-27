@@ -642,7 +642,7 @@ chown -R $User:$Group /home/$User/.asoundrc
 cd $Origin
 chmod +x run_sphinx*
 chmod +x sphinx_test.sh
-chmod +x startup.sh
+
 
 echo ""
 echo '============================='
@@ -651,6 +651,8 @@ echo '========= Finished =========='
 echo '*****************************'
 echo '============================='
 echo ""
+echo "You must manually run the Alexa sample app using a terminal for authentication at least once."
+echo "Then use startup.sh."
 
 Number_Terminals=2
 if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
@@ -669,6 +671,22 @@ if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
   echo "echo 'Run pocketsphinx: cd $SDKRoot && ./run_sphinx_no_log.sh'" | tee -a ~/.bashrc > /dev/null
 fi
 echo "echo '====================================================================================================='" | tee -a ~/.bashrc > /dev/null
+echo "echo 'You must manually run the Alexa sample app using a terminal for authentication at least once.'" | tee -a ~/.bashrc > /dev/null
+echo "echo 'Then use startup.sh.'" | tee -a ~/.bashrc > /dev/null
+
+echo "#!/bin/bash" | tee -a ./startup.sh > /dev/null
+echo "cd $Companion_Service_Loc" | tee -a ./startup.sh > /dev/null
+echo "cd qterminal -e 'npm start' &" | tee -a ./startup.sh > /dev/null
+echo "cd $Java_Client_Loc" | tee -a ./startup.sh > /dev/null
+echo "cd qterminal -e 'mvn exec:exec' &" | tee -a ./startup.sh > /dev/null
+echo "sleep 30" | tee -a ./startup.sh > /dev/null
+echo "cd $Wake_Word_Agent_Loc" | tee -a ./startup.sh > /dev/null
+echo "cd qterminal -e 'sudo ./wakeWordAgent gpio' &" | tee -a ./startup.sh > /dev/null
+echo "cd $Origin" | tee -a ./startup.sh > /dev/null
+echo "cd qterminal -e './run_sphinx_no_log.sh' &" | tee -a ./startup.sh > /dev/null
+
+chmod +x ./startup.sh
+
 
 while [[ -z $ReBoot ]] ; do
     echo "If you enter any key, reboot the system.:"
