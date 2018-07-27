@@ -642,6 +642,7 @@ chown -R $User:$Group /home/$User/.asoundrc
 cd $Origin
 chmod +x run_sphinx*
 chmod +x sphinx_test.sh
+chmod +x startup.sh
 
 echo ""
 echo '============================='
@@ -657,7 +658,7 @@ if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
 fi
 
 echo "echo''" | tee -a ~/.bashrc > /dev/null
-echo "echo'====================================================================================================='" | tee -a ~/.bashrc > /dev/null
+echo "echo '====================================================================================================='" | tee -a ~/.bashrc > /dev/null
 echo "echo 'To run the demo, do the following in $Number_Terminals seperate terminals:'" | tee -a ~/.bashrc > /dev/null
 echo "echo 'Run the companion service: cd $Companion_Service_Loc && npm start'" | tee -a ~/.bashrc > /dev/null
 echo "echo 'Run the AVS Java Client: cd $Java_Client_Loc && mvn exec:exec'" | tee -a ~/.bashrc > /dev/null
@@ -667,7 +668,7 @@ if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
   echo "echo '  cd $Wake_Word_Agent_Loc/src && sudo ./wakeWordAgent gpio'" | tee -a ~/.bashrc > /dev/null
   echo "echo 'Run pocketsphinx: cd $SDKRoot && ./run_sphinx_no_log.sh'" | tee -a ~/.bashrc > /dev/null
 fi
-echo "echo'====================================================================================================='" | tee -a ~/.bashrc > /dev/null
+echo "echo '====================================================================================================='" | tee -a ~/.bashrc > /dev/null
 
 while [[ -z $ReBoot ]] ; do
     echo "If you enter any key, reboot the system.:"
