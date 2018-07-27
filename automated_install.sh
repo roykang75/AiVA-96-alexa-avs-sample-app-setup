@@ -665,7 +665,7 @@ if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
   echo "echo 'Run the wake word agent: '" | tee -a ~/.bashrc > /dev/null
   echo "echo '  GPIO: PLEASE NOTE -- If using this option, run the wake word agent as sudo:'" | tee -a ~/.bashrc > /dev/null
   echo "echo '  cd $Wake_Word_Agent_Loc/src && sudo ./wakeWordAgent -e gpio'" | tee -a ~/.bashrc > /dev/null
-  echo "echo 'Run pocketsphinx: cd $SDKRoot && run_sphinx_no_log.sh'" | tee -a ~/.bashrc > /dev/null
+  echo "echo 'Run pocketsphinx: cd $SDKRoot && ./run_sphinx_no_log.sh'" | tee -a ~/.bashrc > /dev/null
 fi
 echo "echo'====================================================================================================='" | tee -a ~/.bashrc > /dev/null
 
