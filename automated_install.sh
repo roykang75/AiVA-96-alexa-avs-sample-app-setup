@@ -653,6 +653,8 @@ echo '============================='
 echo ""
 echo "You must manually run the Alexa sample app using a terminal for authentication at least once."
 echo "Then use startup.sh."
+echo ""
+echo ""
 
 Number_Terminals=2
 if [ "$Wake_Word_Detection_Enabled" = "true" ]; then
